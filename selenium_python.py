@@ -4,6 +4,9 @@ import time
 # Open Chrome Browser using Chromedriver
 driver = webdriver.Chrome("chromedriver.exe")
 
+# Change browser window
+driver.set_window_size(1080, 1080)
+
 # Navigate to python.org
 driver.get("https://www.python.org/")
 time.sleep(3)
