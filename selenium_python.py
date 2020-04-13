@@ -21,5 +21,17 @@ click_button.click()
 
 time.sleep(3)
 
+# Move backwards in the browser history
+driver.back()
+
+# Wait for 2 seconds
+time.sleep(2)
+
+# Move forwards in the browser history
+driver.forward()
+
+# Wait for 2 seconds
+time.sleep(2)
+
 # Close Browser 
 driver.close()
