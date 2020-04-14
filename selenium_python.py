@@ -16,7 +16,7 @@ enter_searchbar = driver.find_element_by_id("id-search-field")
 enter_searchbar.send_keys("loops")
 
 # Click on the button to display results
-click_button = driver.find_element_by_id("submit")
+click_button = driver.find_element_by_xpath("//button[normalize-space()='GO']")
 click_button.click()
 
 time.sleep(3)
