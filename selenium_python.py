@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+from selenium.webdriver.common.keys import Keys
 
 # Open Chrome Browser using Chromedriver
 driver = webdriver.Chrome("chromedriver.exe")
@@ -16,8 +17,14 @@ enter_searchbar = driver.find_element_by_id("id-search-field")
 enter_searchbar.send_keys("loops")
 
 # Click on the button to display results
-click_button = driver.find_element_by_xpath("//button[normalize-space()='GO']")
-click_button.click()
+press_enter = driver.find_element_by_xpath("//button[normalize-space()='GO']")
+press_enter.send_keys(Keys.ENTER)
+
+time.sleep(3)
+
+# Scroll down using Page_Down key
+scroll_down = driver.find_element_by_tag_name('body')
+scroll_down.send_keys(Keys.PAGE_DOWN)
 
 time.sleep(3)
 
